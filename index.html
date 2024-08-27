@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백패킹 장비 무게 계산기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>백패킹 장비 무게 계산기</h1>
+        <form id="weightForm">
+            <div id="itemsContainer">
+                <div class="item">
+                    <label for="item1">장비 이름:</label>
+                    <input type="text" id="item1" name="item1" required>
+                    
+                    <label for="category1">카테고리:</label>
+                    <select id="category1" name="category1" required>
+                        <option value="텐트">텐트</option>
+                        <option value="침낭">침낭</option>
+                        <option value="조리도구">조리도구</option>
+                        <option value="기타">기타</option>
+                    </select>
+                    
+                    <label for="weight1">무게 (그램):</label>
+                    <input type="number" id="weight1" name="weight1" required>
+                    <button type="button" class="editItem">수정</button>
+                    <button type="button" class="deleteItem">삭제</button>
+                </div>
+            </div>
+            <button type="button" id="addItem">장비 추가</button>
+            <button type="button" id="calculateTotal">계산하기</button>
+        </form>
+        <h2>총 무게: <span id="totalWeight">0</span>그램</h2>
+        <h3>카테고리별 무게:</h3>
+        <ul id="categoryWeights"></ul>
+
+        <div class="categoryManager">
+            <h3>카테고리 관리</h3>
+            <label for="newCategory">새 카테고리 이름:</label>
+            <input type="text" id="newCategory" name="newCategory">
+            <button type="button" id="addCategory">카테고리 추가</button>
+            <h4>현재 카테고리 목록:</h4>
+            <ul id="categoryList"></ul>
+            <button type="button" id="deleteCategory">선택한 카테고리 삭제</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
